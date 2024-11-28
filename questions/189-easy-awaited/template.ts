@@ -1,1 +1,1 @@
-export type Awaited = any
+export type Awaited<T> = T extends Promise<infer Inner> ? Inner : T;

@@ -1,1 +1,3 @@
-export type MyPick<T, K> = any
+export type MyPick<Type, Keys extends keyof Type> = {
+  [Property in Keys]: Type[Property]
+}
